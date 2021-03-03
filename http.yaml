@@ -3,5 +3,10 @@
   tasks:
     - name: install http
       yum:
-        name: htppd
+        name: httpd
+        state: started
+  
+    - name: start httpd
+      systemd: 
+        name: httpd
         state: started
